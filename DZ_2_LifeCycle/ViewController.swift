@@ -35,16 +35,22 @@ class ViewController: UIViewController {
         log(title)
     }
     
+    // Если надо подредактировать констрейнты
+    override func updateViewConstraints() {
+        
+        log(title)
+        
+        super.updateViewConstraints()
+    }
+    
     // Срабатывает перед тем как размер вью поменяется под размер экрана
     override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
         
         log(title)
     }
     
     // Срабатывает после того как размер вью изменился под размер экрана
     override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
         
         log(title)
     }
@@ -58,7 +64,6 @@ class ViewController: UIViewController {
     
     // Срабатывает перед поворотом экрана
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
         
         log(title)
     }
